@@ -1,0 +1,32 @@
+1. What is the difference between HTTP/1.1 and HTTP/2 ?
+Ans.
+	HTTP/1.1 :
+		1. It is a textual protocol that is, it is a format made up of lines of text in ASCII encoded.
+		2. Basically it is a stream of characters. HTTP/1.1 messages are parsed by reading the characters one at a time, until a new line is reached.
+		3. An HTTP/1.1 message must be sent in its entirety as one continuous stream of data and that connection can not be used for anything else but 					transmitting that message until it is completed.
+		4. Sincle multiple data packets cannot pass each other, there are situations in which a request at the head of the queue that cannot retrieve its 			required resource will block all the requests behind it creating bottleneck.
+
+
+	HTTP/2 :
+		1. It is a binary protocol that is, HTTP/2 uses the binary framing layer to encapsulate the messages in binary format.
+		2. There are multiple streams of data. Each stream consists of multiple messages in the familiar request/response format.
+		3. It makes use of multiplexing, where multiple requests and responses can run in parallel without blocking the messages behind them.
+
+2. What is the difference between GET and POST method ?
+Ans.
+	GET :
+		1. It is used to request data from a specified resource.
+		2. Cannot be used to modify data.
+		3. GET requests can be cached.
+		4. Limited length.
+		5. The parameters remain in browser history as they are part of the URL.
+		6. By default, any HTTP request is a GET request unless specified as a different METHOD.
+
+
+	POST :
+		1. It is used to send data to a server to create or update a resource.
+		2. POST requests cannot be cached.
+		3. Can be almost of any length.
+		4. The parameters are not saved in browser history.
+		5. To make a POST request, have to specify the METHOD as POST.
+		
